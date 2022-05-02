@@ -2,7 +2,10 @@
 Perform basic statistics on a collection of small positive integers
 allowed values 0 < x < 1000
 """
+from __future__ import annotations
+
 from typing import Dict
+
 from app.validators.inputvalidator import valid_input
 
 MIN_VAL = 1
@@ -25,7 +28,7 @@ class DataCapture():
         else:
             self.numbers_dict[num] += 1
 
-    def build_stats(self):
+    def build_stats(self) -> StatsEngine:
         """Return StatsEngine instance."""
         return StatsEngine(self)
 
