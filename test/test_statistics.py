@@ -29,7 +29,7 @@ class TestStatsEngine(unittest.TestCase):
     def setUpClass(cls):
         data_capture = DataCapture()
         inputs = range(1, 1000)
-        
+
         for i in inputs:
             for _ in range(i):
                 data_capture.add(i)

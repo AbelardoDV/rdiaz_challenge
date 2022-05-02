@@ -13,7 +13,7 @@ MAX_VAL = 999
 
 
 class DataCapture():
-    """DataCapture holds a collection of small positive integers (0<x<1000)
+    """DataCapture holds a # of repetitions of small positive integers (0<x<1000)
     from which statistics can be perform."""
 
     def __init__(self) -> None:
@@ -62,12 +62,10 @@ class StatsEngine:
     @valid_input()
     def between(self, num_a: int, num_b: int) -> int:
         """Return the amount of numbers between [num_a, num_b]."""
-        upper = num_b
-        lower = num_a
-        if num_a > upper:
-            upper = num_a
-            lower = num_b
-        if num_a == MIN_VAL or num_b == MIN_VAL:
+        upper = max(num_a, num_b)
+        lower = min(num_a, num_b)
+
+        if lower == MIN_VAL:
             return self.cumulative_counter[upper]
 
         return (self.cumulative_counter[upper] -
