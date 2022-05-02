@@ -12,11 +12,11 @@ Python >= 3.8.10
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/AbelardoDV/my_repo.git
+   git clone https://github.com/AbelardoDV/rdiaz_challenge.git
    ```
 2. cd to the project:
    ```sh
-   cd my_repo/
+   cd rdiaz_challenge/
    ```
 3. Run production
    ```sh
